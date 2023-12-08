@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Forms</h1>
+
+        <!-- Formulário para adicionar Cliente -->
+        <form id="cliente-form">
+            <h2>Adicionar Cliente</h2>
+            <label for="cliente-nome">Nome:</label>
+            <input type="text" id="cliente-nome" name="nome" required>
+            <label for="cliente-cpf">CPF:</label>
+            <input type="text" id="cliente-cpf" name="cpf" required>
+            <button type="button" onclick="adicionarCliente()">Adicionar Cliente</button>
+        </form>
+
+        <!-- Formulário para adicionar Categoria -->
+        <form id="categoria-form">
+            <h2>Adicionar Categoria</h2>
+            <label for="categoria-nome">Nome:</label>
+            <input type="text" id="categoria-nome" name="nomecat" required>
+            <button type="button" onclick="adicionarCategoria()">Adicionar Categoria</button>
+        </form>
+
+        <!-- Formulário para adicionar Tipo -->
+        <form id="tipo-form">
+            <h2>Adicionar Tipo</h2>
+            <label for="tipo-nome">Nome:</label>
+            <input type="text" id="tipo-nome" name="nometip" required>
+            <button type="button" onclick="adicionarTipo()">Adicionar Tipo</button>
+        </form>
+
+        <!-- Formulário para adicionar Vinho -->
+        <form id="vinho-form">
+            <h2>Adicionar Vinho</h2>
+            <label for="vinho-nome">Nome:</label>
+            <input type="text" id="vinho-nome" name="nomevin" required>
+            <label for="vinho-precovin">Preço:</label>
+            <input type="text" id="vinho-precovin" name="precovin" required>
+            <label for="vinho-anovin">Ano:</label>
+            <input type="text" id="vinho-anovin" name="anovin" required>
+            <label for="vinho-paisvin">País:</label>
+            <input type="text" id="vinho-paisvin" name="paisvin" required>
+            <label for="vinho-estoquevin">Estoque:</label>
+            <input type="text" id="vinho-estoquevin" name="estoquevin" required>
+            <label for="vinho-fkcodigotip">Código do Tipo:</label>
+            <input type="text" id="vinho-fkcodigotip" name="fkcodigotip" required>
+            <label for="vinho-fkcodigocat">Código da Categoria:</label>
+            <input type="text" id="vinho-fkcodigocat" name="fkcodigocat" required>
+            <button type="button" onclick="adicionarVinho()">Adicionar Vinho</button>
+        </form>
+
+        <!-- Formulário para adicionar Carrinho -->
+        <form id="carrinho-form">
+            <h2>Adicionar Carrinho</h2>
+            <label for="carrinho-estadocar">Estado:</label>
+            <input type="text" id="carrinho-estadocar" name="estadocar" required>
+            <label for="carrinho-fkcodigocli">Código do Cliente:</label>
+            <input type="text" id="carrinho-fkcodigocli" name="fkcodigocli" required>
+            <button type="button" onclick="adicionarCarrinho()">Adicionar Carrinho</button>
+        </form>
+
+        <!-- Formulário para adicionar Vinho do Carrinho -->
+        <form id="vinhodocarrinho-form">
+            <h2>Adicionar Vinho do Carrinho</h2>
+            <label for="vinhodocarrinho-fkcodigovin">Código do Vinho:</label>
+            <input type="text" id="vinhodocarrinho-fkcodigovin" name="fkcodigovin" required>
+            <label for="vinhodocarrinho-fkcodigocar">Código do Carrinho:</label>
+            <input type="text" id="vinhodocarrinho-fkcodigocar" name="fkcodigocar" required>
+            <button type="button" onclick="adicionarVinhoDoCarrinho()">Adicionar Vinho do Carrinho</button>
+        </form>
+    </div>
+
+    <script src="/static/api.js"></script>
+</body>
+</html>

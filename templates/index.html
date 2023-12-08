@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Interface</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <h1>API Interface</h1>
+
+    <button onclick="getClientes()">Get Clientes</button>
+    <button onclick="getCategorias()">Get Categorias</button>
+    <button onclick="getTipos()">Get Tipos</button>
+    <button onclick="getVinhos()">Get Vinhos</button>
+    <button onclick="getCarrinhos()">Get Carrinhos</button>
+    <button onclick="getVinhosDoCarrinho()">Get Vinhos do Carrinho</button>
+    <button onclick="getVinhosComInfo()">Get Vinhos com Informações</button>
+
+    <h2>Resposta da API:</h2>
+    <pre id="api-response"></pre>
+
+    <a href="/forms">Ir para Página de Formulários</a>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ url_for('static', filename='api.js') }}"></script>
+</body>
+</html>
